@@ -11,7 +11,7 @@ The `reconcile-client-side` Terraform module manages resources using Kustomize w
 ## Usage
 
 ```hcl
-module "reconcile_client_side" {
+module "managed_resources" {
   source = "adaptivegears/standard/kubernetes//modules/reconcile-client-side"
 
   path = "${path.module}/k8s"
@@ -40,7 +40,7 @@ module "reconcile_client_side" {
 ## Example
 
 ```hcl
-module "reconcile_client_side" {
+module "managed_resources" {
   source = "adaptivegears/standard/kubernetes//modules/reconcile-client-side"
 
   path = "${path.module}/k8s"
