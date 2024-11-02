@@ -1,3 +1,4 @@
 data "kustomization_build" "this" {
-  path = path.module
+  path = var.path
 }
+

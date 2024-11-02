@@ -47,12 +47,6 @@ module "managed_resources" {
 }
 ```
 
-## Best Practices
-
-- **Version Pinning**: Ensure that the Terraform and provider versions are pinned to avoid unexpected changes.
-- **Sensitive Data Management**: Use Terraform's `sensitive` attribute to manage sensitive information securely.
-- **Modular Design**: Break down complex configurations into reusable modules for better maintainability.
-
 ## License
 
 [MIT](LICENSE)
