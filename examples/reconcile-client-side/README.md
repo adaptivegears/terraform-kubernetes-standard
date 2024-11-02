@@ -7,6 +7,12 @@ The `reconcile-client-side` Terraform module manages Kubernetes resources using 
 - **Kubernetes Backend**: Stores Terraform state within a Kubernetes secret for secure state management.
 - **Modular Configuration**: Organizes Kubernetes manifests using Terraform modules for better scalability and maintainability.
 
+## Prerequisites
+
+- **Terraform**: Ensure you have Terraform installed on your machine.
+- **Kubernetes Cluster**: A running Kubernetes cluster to manage resources.
+- **AdaptiveGears Standard Modules**: The source specified (`adaptivegears/standard/kubernetes//modules/reconcile-client-side`) should be accessible from your Terraform setup.
+
 ## Usage
 
 To use the `reconcile-client-side` module in your Terraform configuration, follow these steps:
@@ -61,12 +67,6 @@ To use the `reconcile-client-side` module in your Terraform configuration, follo
 
 This will set up the Kubernetes resources as defined in your manifests and manage the Terraform state within the specified Kubernetes backend.
 
-## Prerequisites
-
-- **Terraform**: Ensure you have Terraform installed on your machine.
-- **Kubernetes Cluster**: A running Kubernetes cluster to manage resources.
-- **AdaptiveGears Standard Modules**: The source specified (`adaptivegears/standard/kubernetes//modules/reconcile-client-side`) should be accessible from your Terraform setup.
-
 ## Example Directory Structure
 
 ```
@@ -78,11 +78,3 @@ reconcile-client-side/
     ├── service.yaml
     └── kustomization.yaml
 ```
-
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any enhancements or bug fixes.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
