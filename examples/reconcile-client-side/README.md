@@ -50,6 +50,17 @@ To use the `reconcile-client-side` module in your Terraform configuration, follo
 
    Place your Kubernetes manifest files (e.g., `deployment.yaml`, `service.yaml`) in the specified `k8s` directory. The module will manage these resources based on your configuration.
 
+5. **Apply the Configuration**
+
+   Initialize and apply the Terraform configuration:
+
+    ```bash
+    terraform init
+    terraform apply
+    ```
+
+This will set up the Kubernetes resources as defined in your manifests and manage the Terraform state within the specified Kubernetes backend.
+
 ## Prerequisites
 
 - **Terraform**: Ensure you have Terraform installed on your machine.
@@ -67,33 +78,6 @@ reconcile-client-side/
     ├── service.yaml
     └── kustomization.yaml
 ```
-
-## Getting Started
-
-1. **Configure Kubernetes Access**
-
-   Ensure that your Kubernetes configuration (`kubeconfig`) is set up to communicate with the desired Kubernetes cluster. You can specify the `KUBECONFIG` environment variable to point to your kubeconfig file.
-
-   ```bash
-   export KUBECONFIG=/path/to/your/kubeconfig
-   ```
-
-   Alternatively, you can place your kubeconfig file in the default location (`~/.kube/config`).
-
-2. **Configure Terraform**
-
-   Update the `terraform.tf` and `main.tf` files as needed to match your Kubernetes environment and desired state.
-
-3. **Apply the Configuration**
-
-   Initialize and apply the Terraform configuration:
-
-   ```bash
-   terraform init
-   terraform apply
-   ```
-
-   This will set up the Kubernetes resources as defined in your manifests and manage the Terraform state within the specified Kubernetes backend.
 
 ## Contributing
 
