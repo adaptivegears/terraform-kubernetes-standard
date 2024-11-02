@@ -11,7 +11,17 @@ The `reconcile-client-side` Terraform module manages Kubernetes resources using 
 
 To use the `reconcile-client-side` module in your Terraform configuration, follow these steps:
 
-1. **Initialize the Backend**
+1. **Configure Kubernetes Access**
+
+   Ensure that your Kubernetes configuration (`kubeconfig`) is set up to communicate with the desired Kubernetes cluster. You can specify the `KUBECONFIG_PATH` environment variable to point to your kubeconfig file.
+
+   ```bash
+   export KUBECONFIG_PATH=/path/to/your/kubeconfig
+   ```
+
+   Alternatively, you can place your kubeconfig file in the default location (`~/.kube/config`).
+
+2. **Initialize the Backend**
 
    Configure Terraform to use the Kubernetes backend by specifying the appropriate namespace and secret suffix.
 
@@ -24,7 +34,7 @@ To use the `reconcile-client-side` module in your Terraform configuration, follo
    }
    ```
 
-2. **Include the Module**
+3. **Include the Module**
 
    Add the `reconcile-client-side` module to your Terraform configuration by specifying the source and path.
 
@@ -36,7 +46,7 @@ To use the `reconcile-client-side` module in your Terraform configuration, follo
    }
    ```
 
-3. **Define Kubernetes Manifests**
+4. **Define Kubernetes Manifests**
 
    Place your Kubernetes manifest files (e.g., `deployment.yaml`, `service.yaml`) in the specified `k8s` directory. The module will manage these resources based on your configuration.
 
@@ -60,12 +70,15 @@ reconcile-client-side/
 
 ## Getting Started
 
-1. **Clone the Repository**
+1. **Configure Kubernetes Access**
+
+   Ensure that your Kubernetes configuration (`kubeconfig`) is set up to communicate with the desired Kubernetes cluster. You can specify the `KUBECONFIG` environment variable to point to your kubeconfig file.
 
    ```bash
-   git clone https://github.com/your-repo/reconcile-client-side.git
-   cd reconcile-client-side
+   export KUBECONFIG=/path/to/your/kubeconfig
    ```
+
+   Alternatively, you can place your kubeconfig file in the default location (`~/.kube/config`).
 
 2. **Configure Terraform**
 
@@ -80,7 +93,7 @@ reconcile-client-side/
    terraform apply
    ```
 
-This will set up the Kubernetes resources as defined in your manifests and manage the Terraform state within the specified Kubernetes backend.
+   This will set up the Kubernetes resources as defined in your manifests and manage the Terraform state within the specified Kubernetes backend.
 
 ## Contributing
 
@@ -89,4 +102,3 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
