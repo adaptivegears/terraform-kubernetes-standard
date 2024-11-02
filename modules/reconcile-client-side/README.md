@@ -1,1 +1,1 @@
-# `adaptivegears/standard/kubernetes//reconcile-client-side`
+# `adaptivegears/standard/kubernetes//modules/reconcile-client-side`
