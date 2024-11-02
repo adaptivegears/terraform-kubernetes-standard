@@ -22,7 +22,7 @@ module "managed_resources" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| `path` | The path to the module containing Kustomize configurations. | `string` | n/a | ✓ |
+| `path` | The path to the module containing Kustomize configurations. | `string` | `"."` | ✓ |
 
 
 ## Requirements
