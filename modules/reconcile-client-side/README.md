@@ -14,7 +14,7 @@ The `reconcile-client-side` Terraform module manages resources using Kustomize w
 module "managed_resources" {
   source = "adaptivegears/standard/kubernetes//modules/reconcile-client-side"
 
-  path = "${path.module}/k8s"
+  kustomization = "${path.module}/k8s"
 }
 ```
 
@@ -22,7 +22,7 @@ module "managed_resources" {
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| `path` | The path to the module containing Kustomize configurations. | `string` | `"."` | ✓ |
+| `kustomization` | The path to the module containing Kustomize configurations. | `string` | `"."` | ✓ |
 
 
 ## Requirements
@@ -43,7 +43,7 @@ module "managed_resources" {
 module "managed_resources" {
   source = "adaptivegears/standard/kubernetes//modules/reconcile-client-side"
 
-  path = "${path.module}/k8s"
+  kustomization = "${path.module}/k8s"
 }
 ```
 
