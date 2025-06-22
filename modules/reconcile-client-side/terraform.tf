@@ -1,4 +1,4 @@
-data "kustomization_overlay" "this" {
+data "kustomization_build" "this" {
   resources = [
     var.kustomization
   ]
