@@ -3,7 +3,7 @@ data "kustomization_overlay" "this" {
     var.kustomization
   ]
 
-  kustomize_options = {
+  kustomize_options {
     enable_helm = var.helm_enable
     helm_path   = var.helm_path
   }
